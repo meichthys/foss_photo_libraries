@@ -26,6 +26,8 @@ I've been on a quest to replace most of my daily software needs with open-source
 | EXIF data viewing                     | ✅                                                         | ✅                                                          | ❌                                                        | ✅                                                       | ✅                                                       | ✅                                                  |
 | Multiple User Support                 | ✅                                                         | ✅8️⃣                                                       | ✅                                                        | ✅                                                       | [❌](https://github.com/photoprism/photoprism/issues/98) | ✅                                                  |
 
+**Note:** This list is by no means comprehensive. For links to other photo library projects, see the [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries) list.
+
 ## Contributing
 
 Please contribute additions and corrections!
