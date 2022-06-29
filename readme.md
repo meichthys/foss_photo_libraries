@@ -4,10 +4,10 @@ I've been on a quest to replace most of my daily software needs with open-source
 
 ## Comparison
 
-✅ = Feature exists in at least a limited fashion
-🚧 = Feature may exist but may not be practical or officially released
-❌ = Feature does not yet exist
-#️⃣ = Subjective measure of feature quality (on scale of 0-10)
+    ✅ = Feature exists in at least a limited fashion
+    🚧 = Feature may exist but may not be practical or officially released
+    ❌ = Feature does not yet exist
+    #️⃣ = Subjective measure of feature quality (on scale of 0-10)
 
 **Tip:** Hover over icons for missing/incomplete features for more information
 
