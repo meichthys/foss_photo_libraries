@@ -4,11 +4,11 @@ I've been on a quest to replace most of my daily software needs with open-source
 
 ## Comparison
 
-✅ = Feature exists in at least a limited fashion
-🚧 = Feature may exist but may not be practical or officially released
-❌ = Feature does not yet exist
-#️⃣ = Subjective measure of feature quality (on scale of 0-10)
-**Tip:** Hover over icons for missing/incomplete features for more information
+    ✅ = Feature exists in at least a limited fashion
+    🚧 = Feature may exist but may not be practical or officially released
+    ❌ = Feature does not yet exist
+    #️⃣ = Subjective measure of feature quality (on scale of 0-10)
+    **Tip:** Hover over icons for missing/incomplete features for more information
 
 
 | Feature                 | [Damselfly](https://github.com/Webreaper/Damselfly)                       | [Immich](https://github.com/alextran1502/immich)                          | [Librephotos](https://github.com/LibrePhotos/librephotos)                     | [Lychee](https://github.com/LycheeOrg/Lychee)                          | [Nextcloud Photos](https://github.com/nextcloud/photos/)               | [Photonix](https://github.com/photonixapp/photonix)                        | [PiGallery2](https://github.com/bpatrik/pigallery2)                      | [Photoprism](https://github.com/photoprism/photoprism)                        | [Photoview](https://github.com/photoview/photoview)                           | [Piwigo](https://github.com/Piwigo/Piwigo)                          |
