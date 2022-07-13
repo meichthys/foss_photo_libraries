@@ -1,6 +1,6 @@
 # Free and OpenSource Photo Libraries
 
-I've been on a quest to replace most of my daily software needs with open-source alternatives. One difficulty that has been widely discussed is photo library alternatives to Google Photos and Apple Photos. In an attempt to clarify the alternatives I've started the list below:
+There are many great free and open-source alternatives to paid photo libraries. This project aims to track and compare the feature set between the many different options.
 
 ## Comparison
 
