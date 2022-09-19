@@ -35,9 +35,13 @@ Is there a method to automatically upload images from a mobile device?
 
 Is a web interface provided?
 
-## Mobile App
+## Android App
 
-Is a mobile app provided? [We currently don't differentiate between Android/Apple/etc.](https://github.com/meichthys/foss_photo_libraries/issues/19)
+Is an Android app provided?
+
+## iOS App
+
+Is an ios app provided?
 
 ## Desktop App
 
