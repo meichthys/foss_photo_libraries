@@ -49,7 +49,7 @@ Is a desktop app provided?
 
 ## LivePhotos Support
 
-Are Live Photos supported? We currently don't differentiate between the differnt types of Live Photos (Apple, Google, Samsung, etc).
+Are Live Photos supported? We currently don't differentiate between the different types of Live Photos (Apple, Google, Samsung, etc).
 
 ## Video Support
 
@@ -61,7 +61,7 @@ Can photos be geolocated on a map?
 
 ## Photo Discovery
 
-Does the project have a mechanism to aid the user in re-discovering photos. this can include automatic album generation, 'year in review', etc.
+Does the project have a mechanism to aid the user in re-discovering photos. This can include automatic album generation, 'year in review', etc.
 
 ## Albums
 
