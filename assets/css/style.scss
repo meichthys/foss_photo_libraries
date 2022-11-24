@@ -3,19 +3,21 @@
 
 @import "{{ site.theme }}";
 
-div#comparison-table {
+$background-color: #fff;
+
+.table-wrapper {
   max-height: 75vh;
   overflow: auto;
-}
 
-table {
-  display: table !important;
-  text-align: left;
-  position: relative;
+  > table {
+    display: table;
+    position: relative;
+    text-align: left;
+  }
 }
 
 th {
-  background: white;
+  background: $background-color;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -27,12 +29,12 @@ th:first-child {
 }
 
 td:first-child {
-  background: white;
-  position: sticky;
+  background: $background-color;
   left: 0;
+  position: sticky;
   z-index: 1;
 }
 
-div.container-lg > h1:nth-child(1) {
+.container-lg > h1:nth-child(1) {
   display: none;
 }
