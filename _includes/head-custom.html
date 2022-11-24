@@ -1,0 +1,27 @@
+<!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+{% include head-custom-google-analytics.html %}
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}" -->
+<script>
+  function toggleWidth() {
+    if (document.querySelector("div.container-lg").style["max-width"]) {
+      document.querySelector("div.container-lg").style.maxWidth = null;
+      document.querySelector("button[name='toggle-table-width']").textContent = "Expand table";
+    } else {
+      document.querySelector("div.container-lg").style.maxWidth = "100%";
+      document.querySelector("button[name='toggle-table-width']").textContent = "Collapse table";
+    }
+  }
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var el = document.querySelector('table');
+    var wrapper = document.createElement('div');
+    wrapper.setAttribute("id", "comparison-table");
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+    document.getElementById("comparison-table").insertAdjacentHTML( 'beforebegin', '<button name="toggle-table-width" onclick="toggleWidth()">Expand table</button>' );
+  });
+</script>
+<!-- end custom head snippets -->
