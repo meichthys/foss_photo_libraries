@@ -40,6 +40,8 @@ Tip: Hover over icons for missing/incomplete features for more information (link
 
 **Note:** This list is by no means comprehensive. For links to other photo library projects, see the [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries) list.
 
+An HTLM version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
+
 ## Contributing
 
 Please contribute additions and corrections!
