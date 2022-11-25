@@ -1,0 +1,7 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://pigallery2\\.herokuapp\\.com/"
+    }
+  ]
+}

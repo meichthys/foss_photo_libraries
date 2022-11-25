@@ -1,5 +1,5 @@
 # Configuration file for MegaLinter
-# See all available variables at https://megalinter.github.io/configuration/ and in linters documentation
+# See all available variables at https://megalinter.io/latest/configuration/ and in linters documentation
 
 APPLY_FIXES: all # all, none, or list of linter keys
 # ENABLE: # If you use ENABLE variable, all other languages/formats/tooling-formats will be disabled by default
@@ -7,6 +7,20 @@ APPLY_FIXES: all # all, none, or list of linter keys
 DISABLE:
   # - COPYPASTE # Uncomment to disable checks of excessive copy-pastes
   - SPELL # Comment to enable checks of spelling mistakes
+DISABLE_LINTERS:
+  - CSS_STYLELINT  # We would need to enable support for the custom postcss-scss syntax https://www.npmjs.com/package/postcss-scss
 SHOW_ELAPSED_TIME: true
 FILEIO_REPORTER: false
 # DISABLE_ERRORS: true # Uncomment if you want MegaLinter to detect errors but not block CI to pass
+CSS_SCSS_LINT_PRE_COMMANDS:
+  # Remove Jekyll Front Matter https://jekyllrb.com/docs/front-matter/
+  - command: "sed --in-place '1{/^---$/{:a N;/---$/!ba;d}}' assets/css/*.scss"
+    continue_if_failed: false
+    cwd: workspace
+  # Remove injected variables
+  - command: 'sed --in-place ''s/^.*{{ site\.theme }}.*$//'' assets/css/*.scss'
+    continue_if_failed: false
+    cwd: workspace
+MARKDOWN_MARKDOWNLINT_ARGUMENTS:
+  - --disable
+  - MD013  # Disable line length lint https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md013

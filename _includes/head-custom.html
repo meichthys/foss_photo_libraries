@@ -18,10 +18,10 @@
   document.addEventListener("DOMContentLoaded", function(event) {
     var el = document.querySelector('table');
     var wrapper = document.createElement('div');
-    wrapper.setAttribute("id", "comparison-table");
+    wrapper.setAttribute("class", "table-wrapper");
     el.parentNode.insertBefore(wrapper, el);
     wrapper.appendChild(el);
-    document.getElementById("comparison-table").insertAdjacentHTML( 'beforebegin', '<button name="toggle-table-width" onclick="toggleWidth()">Expand table</button>' );
+    wrapper.insertAdjacentHTML( 'beforebegin', '<button name="toggle-table-width" onclick="toggleWidth()">Expand table</button>' );
   });
 </script>
 <!-- end custom head snippets -->
