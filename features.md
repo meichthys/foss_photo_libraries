@@ -79,6 +79,10 @@ Can photos be shared with other users or non-users?
 
 Is there a search for the photos? Does it support semantic search, filtering, or other searching methods?
 
+## User Defined Tags
+
+Can photos have user-defined (not AI) tags applied, and be filtered by those tags? 
+
 ## Docker Installation
 
 Does the project provide a docker image? Are there example docker-compose deployments?
