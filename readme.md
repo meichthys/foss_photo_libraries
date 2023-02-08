@@ -1,6 +1,6 @@
 # Free and OpenSource Photo Libraries
 
-There are many great free and open-source alternatives to paid photo libraries. This project aims to track and compare the feature set between the many different options.
+There are many great free and open-source alternatives to paid photo libraries. This project aims to track and compare the feature set between the many different options with a focus on 'Gratis' (free as in free beer) open source photo libraries. 'Libre' (free as in free speech) projects are also welcome, but will likely need to be submitted via a pull request since the time in testing each different project is significant.
 
 ## Comparison
 
