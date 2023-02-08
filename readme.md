@@ -40,7 +40,7 @@ Tip: Hover over icons for missing/incomplete features for more information (link
 | [Multiple User Support](features.md#multiple-user-support)     | ✅7️⃣                                                                        | ✅7️⃣                                                                        | ✅8️⃣                                                                            | ✅6️⃣                                                                     | ✅9️⃣                                                                     | ✅9️⃣                                                                      | ✅7️⃣                                                                         | ✅7️⃣                                                                       | [❌](https://github.com/photoprism/photoprism/issues/98)                       | ✅6️⃣                                                                                                                       | ✅8️⃣                                                                                            |
 
 
-**Note:** This list is by no means comprehensive. For links to other photo library projects, see the [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries) list.
+**Note:** This list is by no means comprehensive. For links to other photo library projects, see the [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries) list and the [Awesome Privacy](https://github.com/pluja/awesome-privacy#photo-storage) list.
 
 An HTLM version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
 
