@@ -79,9 +79,13 @@ Can photos be shared with other users or non-users?
 
 Is there a search for the photos? Does it support semantic search, filtering, or other searching methods?
 
+## Duplicate Handling
+
+Is there any functionality to manage duplicates?
+
 ## User Defined Tags
 
-Can photos have user-defined (not AI) tags applied, and be filtered by those tags? 
+Can photos have user-defined (not AI) tags applied, and be filtered by those tags?
 
 ## Docker Installation
 
