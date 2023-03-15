@@ -67,6 +67,10 @@ Does the project have a mechanism to aid the user in re-discovering photos. This
 
 Can albums be created and organized?
 
+## Slideshow
+
+Is it possible to view photos in an automated slideshow?
+
 ## Timeline
 
 Is there a way to view the photos chronologically?
