@@ -42,7 +42,7 @@ There are many great free and open-source alternatives to paid photo libraries. 
 
 **Note:** This list is by no means comprehensive. For links to other photo library projects, see the [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries) list and the [Awesome Privacy](https://github.com/pluja/awesome-privacy#photo-storage) list.
 
-An HTLM version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
+An HTML version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
 
 ## Contributing
 
