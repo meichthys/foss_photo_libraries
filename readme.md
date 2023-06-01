@@ -3,13 +3,13 @@
 There are many great free and open-source alternatives to paid photo libraries. This project aims to track and compare the feature set between the many different options with a focus on 'Gratis' (free as in free beer) open source photo libraries. 'Libre' (free as in free speech) projects are also welcome, but will likely need to be submitted via a pull request since the time in testing each different project is significant.
 
 ## Comparison
-
+```
 ✅ = Feature exists in at least a limited fashion
 🚧 = Feature may exist but may not be practical or officially released
 ❌ = Feature does not yet exist
 #️⃣ = Subjective measure of feature quality (on scale of 0-10)
 Tip: Hover over icons for missing/incomplete features for more information (link to repository issue, etc)
-
+```
 
 | Feature                                                        | [Damselfly](https://github.com/Webreaper/Damselfly)                       | [HomeGallery](https://github.com/xemle/home-gallery)                              | [Immich](https://github.com/alextran1502/immich)                          | [Librephotos](https://github.com/LibrePhotos/librephotos)                     | [Lychee](https://github.com/LycheeOrg/Lychee)                          | [Nextcloud Photos](https://github.com/nextcloud/photos/)                | [Nextcloud Memories](https://github.com/pulsejet/memories)              | [Photonix](https://github.com/photonixapp/photonix)                        | [Photofield](https://github.com/SmilyOrg/photofield)                                               | [PiGallery2](https://github.com/bpatrik/pigallery2)                      | [Photoprism](https://github.com/photoprism/photoprism)                        | [Photoview](https://github.com/photoview/photoview)                           | [Piwigo](https://github.com/Piwigo/Piwigo)                          |
 | :--------------------------------------------------------------- | :-------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
