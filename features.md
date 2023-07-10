@@ -63,6 +63,10 @@ Can photos be geolocated on a map?
 
 Does the project have a mechanism to aid the user in re-discovering photos. This can include automatic album generation, 'year in review', etc.
 
+## Existing Folders
+
+Are existing photo directory structures preserved?
+
 ## Albums
 
 Can albums be created and organized?
