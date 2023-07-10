@@ -47,19 +47,19 @@ Is an ios app provided?
 
 Is a desktop app provided?
 
-## LivePhotos Support
+## LivePhotos
 
 Are Live Photos supported? We currently don't differentiate between the different types of Live Photos (Apple, Google, Samsung, etc).
 
-## Video Support
+## Video
 
 Are videos supported?
 
-## Photo Map
+## Geolocation/Map
 
 Can photos be geolocated on a map?
 
-## Photo Discovery
+## Discovery
 
 Does the project have a mechanism to aid the user in re-discovering photos. This can include automatic album generation, 'year in review', etc.
 
@@ -75,11 +75,11 @@ Is it possible to view photos in an automated slideshow?
 
 Is there a way to view the photos chronologically?
 
-## Photo Sharing
+## Sharing
 
 Can photos be shared with other users or non-users?
 
-## Photo Search
+## Search
 
 Is there a search for the photos? Does it support semantic search, filtering, or other searching methods?
 
@@ -110,3 +110,7 @@ Can EXIF data be viewed or better yet edited?
 ## Multiple User Support
 
 Can there be multiple libraries for different users?
+
+## Authentication Providers
+
+Are alternative authentication providers supported? (OAuth, LDAP, etc.)
