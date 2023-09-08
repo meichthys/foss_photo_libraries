@@ -65,7 +65,7 @@ Does the project have a mechanism to aid the user in re-discovering photos. This
 
 ## Existing Folders
 
-Are existing photo directory structures preserved?
+Are existing photo directory structures preserved and browsable?
 
 ## Albums
 
