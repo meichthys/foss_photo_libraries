@@ -1,7 +1,13 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "^https://pigallery2\\.herokuapp\\.com/"
-    }
+      "pattern": "https://pigallery2.onrender.com/gallery/"
+    },
+    {
+      "pattern": "https://demo.photofield.dev/"
+    },
+    {
+      "pattern": "https://demo.memories.gallery/apps/memories/"
+    },
   ]
 }
