@@ -104,7 +104,7 @@ Does the project provide a docker image? Are there example docker-compose deploy
 
 ## Object/Face Recognition
 
-Is there object or face detection included? [We currently do not differentiate between objects/faces](https://github.com/meichthys/foss_photo_libraries/issues/16).
+Is there object or face detection included? [We currently do not differentiate between objects and faces](https://github.com/meichthys/foss_photo_libraries/issues/16).
 
 ## Basic Editing
 
