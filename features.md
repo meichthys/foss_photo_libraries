@@ -10,6 +10,10 @@ The number of stars on the primary github (or other) source code repository.
 
 The number of contributors that have contributed to the project.
 
+## Last Commit
+
+The date of the last git commit to the project.
+
 ## Source Language
 
 The primary language used in the repository's source code.
