@@ -6,10 +6,9 @@ To clarify the definitions/meanings of the features that are included in the com
 
 The number of stars on the primary github (or other) source code repository.
 
-## Active Contributors
+## Contributors
 
-The number of contributors that have contributed over 1k lines of code in the last year.
-We avoid total # of contributors here in order to better guage the number of contributors that would likely carry the project forward if the primary contributor or repository became inactive.
+The number of contributors that have contributed to the project.
 
 ## Source Language
 
