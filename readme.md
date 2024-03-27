@@ -61,3 +61,11 @@ An HTML version of this comparison table is here: https://meichthys.github.io/fo
 Please contribute additions and corrections!
 When contributing, please add links to the source of the information.
 (i.e. link to an issue that indicates that a feature does not exist)
+
+## Support
+
+Maintaining this list of projects takes a lot of time. If you found this comparison helpful, please let me know by considering supporting me. This lets me know that someone is finding this project useful and gives me an incentive to keep it up to date.
+You can support me on Liberapay or Github Sponsors:
+
+<a href="https://liberapay.com/meichthys/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+
