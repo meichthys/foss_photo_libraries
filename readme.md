@@ -4,7 +4,7 @@ There are many great free and open-source alternatives to paid photo libraries. 
 
 ## Comparison
 
-```
+```text
 ✅ = Feature exists in at least a limited fashion
 🚧 = Feature may exist but may not be practical or officially released
 ❌ = Feature does not yet exist
