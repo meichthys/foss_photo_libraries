@@ -1,0 +1,38 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+div#comparison-table {
+  max-height: 75vh;
+  overflow: auto;
+}
+
+table {
+  display: table !important;
+  text-align: left;
+  position: relative;
+}
+
+th {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+th:first-child {
+  left: 0;
+  z-index: 3;
+}
+
+td:first-child {
+  background: white;
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+div.container-lg > h1:nth-child(1) {
+  display: none;
+}
