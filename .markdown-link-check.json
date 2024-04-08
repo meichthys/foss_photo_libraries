@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
     {
-      "pattern": "https://pigallery2.onrender.com/gallery/"
+      "pattern": "https://pigallery2.onrender.com/"
     },
     {
       "pattern": "https://demo.photofield.dev/"
@@ -9,5 +9,8 @@
     {
       "pattern": "https://demo.memories.gallery/apps/memories/"
     },
+    {
+      "pattern": "https://demo.snapcrescent.app"
+    }
   ]
 }
