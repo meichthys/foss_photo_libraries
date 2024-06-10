@@ -1,8 +1,10 @@
-# Free and OpenSource Photo Libraries
+# 📸 Free and OpenSource Photo Libraries
 
 There are many great free and open-source alternatives to paid photo libraries. This project aims to track and compare the feature set between the many different options with a focus on 'Gratis' (free as in free beer) open source photo libraries. 'Libre' (free as in free speech) projects are also welcome, but will likely need to be submitted via a pull request since the time in testing each different project is significant.
 
-## Comparison
+⚠️ Disclaimer: This repository displays both objective and subjective measures of feature quality. The owner of this repository reserves the right to make changes to any pull request.
+
+## ⚖️ Comparison
 
 ```text
 ✅ = Feature exists in at least a limited fashion
@@ -56,14 +58,14 @@ For links to other photo library projects, see:
 
 An HTML version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
 
-## Contributing
+## 🤝 Contributing
 
 Please contribute additions and corrections!
 When contributing, please add links to the source of the information.
 (i.e. link to an issue that indicates that a feature does not exist)
 Tip: Using a [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) helps with formatting.
 
-## Support
+## 🆘 Support
 
 Maintaining this list of projects takes a lot of time. If you found this comparison helpful, please let me know by considering supporting me. This lets me know that someone is finding this project useful and gives me an incentive to keep it up to date.
 You can support me on Liberapay or Github Sponsors:
