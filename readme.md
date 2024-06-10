@@ -61,6 +61,7 @@ An HTML version of this comparison table is here: https://meichthys.github.io/fo
 Please contribute additions and corrections!
 When contributing, please add links to the source of the information.
 (i.e. link to an issue that indicates that a feature does not exist)
+Tip: Using a [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) helps with formatting.
 
 ## Support
 
