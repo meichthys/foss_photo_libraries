@@ -65,6 +65,50 @@ When contributing, please add links to the source of the information.
 (i.e. link to an issue that indicates that a feature does not exist)
 Tip: Using a [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) helps with formatting.
 
+
+How to Contribute
+Fork the Repository:
+
+Start by forking the repository to your own GitHub account.
+Clone Your Fork: 
+
+Clone the forked repository to your local machine:
+
+git clone https://github.com/your-username/foss_photo_libraries.git
+
+Create a New Branch:
+
+Create a new branch for your contribution:
+
+git checkout -b feature/your-feature-name
+Make Your Changes:
+
+Make your changes or additions in your branch. Please ensure that your changes are well-documented and include relevant links to sources if applicable.
+Test Your Changes:
+
+If possible, test your changes to ensure they work as expected and do not introduce new issues.
+Commit and Push:
+
+Commit your changes with a descriptive message:
+
+git commit -m "Add detailed comparison for new photo library"
+Push your branch to your fork:
+
+git push origin feature/your-feature-name
+Open a Pull Request:
+
+Navigate to the original repository and open a pull request. Describe your changes in detail and link any related issues or discussions.
+Contribution Guidelines
+
+Documentation: Ensure that all changes are accompanied by relevant documentation updates.
+Consistency: Maintain consistency with the existing code style and structure.
+Respect: Be respectful and considerate in your interactions. We value a welcoming and inclusive community.
+Review Process
+Once you submit your pull request, it will be reviewed by the project maintainers. We may request changes or provide feedback, so please be prepared to iterate on your contribution.
+
+Reporting Issues
+If you encounter any bugs or have suggestions for new features, please open an issue in the GitHub repository. When reporting an issue, be as detailed as possible and include steps to reproduce the problem if applicable.
+
 ## 🆘 Support
 
 Maintaining this list of projects takes a lot of time. If you found this comparison helpful, please let me know by considering supporting me. This lets me know that someone is finding this project useful and gives me an incentive to keep it up to date.
