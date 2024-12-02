@@ -58,6 +58,12 @@ For links to other photo library projects, see:
 
 An HTML version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
 
+## 👋 More Feature Comparisons
+
+Check out my other feature comparisons:
+
+📝 [foss_note_apps](https://github.com/meichthys/foss_note_apps)
+
 ## 🤝 Contributing
 
 Please contribute additions and corrections!
