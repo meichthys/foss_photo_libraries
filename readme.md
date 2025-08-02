@@ -53,7 +53,7 @@ Tip: Hover over emoji for additional information (ðŸ”— link to related issue, ðŸ
 
 For links to other photo library projects, see:
 
-- [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-and-video-galleries)
+- [Awesome Self-Hosted](https://github.com/awesome-selfhosted/awesome-selfhosted#photo-galleries)
 - [Awesome Privacy](https://github.com/pluja/awesome-privacy#photo-storage)
 
 An HTML version of this comparison table is here: https://meichthys.github.io/foss_photo_libraries/
