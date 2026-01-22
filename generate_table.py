@@ -5,8 +5,6 @@ This script reads projects.json and readme.tpl to create the comparison table.
 """
 
 import json
-from pathlib import Path
-
 
 def score_to_emoji(score):
     """
@@ -250,9 +248,6 @@ def generate_readme(template_file="readme.tpl", output_file="readme.md", json_fi
     # Write output
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(output)
-    
-    print(f"✅ Generated {output_file} from {template_file} and {json_file}")
-
 
 if __name__ == "__main__":
     generate_readme()
