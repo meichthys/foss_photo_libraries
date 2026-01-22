@@ -1,13 +1,14 @@
 # Table Generation System
 
-This system allows you to regenerate the README.md comparison table from structured JSON data.
+This system allows you to regenerate the README.md comparison table from structured JSON data with automatic validation and comprehensive test coverage.
 
 ## Files
 
-- **`projects.json`**: Contains all project data and feature definitions
+- **`projects.json`**: Contains all project data (16 projects) and feature definitions (31 features)
 - **`readme.tpl`**: Template file for the README (contains static content and `{{COMPARISON_TABLE}}` placeholder)
-- **`generate_table.py`**: Python script that generates the table from JSON and inserts it into the template
+- **`generate_table.py`**: Python script that generates the table from JSON and validates data integrity
 - **`readme.md`**: Generated output file (the main README)
+- **`test_generate_table.py`**: Comprehensive test suite covering all functions and validation
 
 ## Usage
 
@@ -17,84 +18,163 @@ To regenerate the README.md file:
 python3 generate_table.py
 ```
 
+To run the test suite:
+
+```bash
+python3 -m pytest test_generate_table.py -v
+```
+
 ## Project Data Structure
 
 The `projects.json` file contains two main sections:
 
 ### 1. Projects Array
 
-Each project has the following fields:
+Each project requires these **mandatory fields**:
+- `name`: Project name
+- `repo`: GitHub repository (owner/repo format)
+- `logo_url`: URL to project logo
+- `logo_alt`: Alt text for logo
 
+**Optional standard fields**:
+- `branch`: Branch name (defaults to "master" for badges)
+- `license_custom`: Custom license text (overrides GitHub badge)
+
+**Feature fields**: Any feature defined in the features array can be added as:
+- `feature_key`: Value (e.g., "8", "x", "wip-3")
+- `feature_key_url`: Optional URL to link the value
+
+Example:
 ```json
 {
   "name": "ProjectName",
-  "github_url": "https://github.com/owner/repo",
+  "repo": "owner/repo",
+  "branch": "main",
   "logo_url": "https://...",
   "logo_alt": "Project Logo",
-  "github_stars_repo": "owner/repo",
-  "contributors_repo": "owner/repo",
-  "last_commit_repo": "owner/repo",
-  "last_commit_branch": "main",
-  "license_repo": "owner/repo",
-  "license_custom": "GPL-3.0",  // Optional: use instead of badge
-  "demo_url": "https://demo.example.com/",
-  "demo_title": "User:demo Pass:demo1234",  // Optional tooltip
-  "demo_rating": "8️⃣"
+  "license_custom": "GPL-3.0",
+  "web_app": "8",
+  "web_app_url": "https://demo.example.com",
+  "ios_app": "x",
+  "ios_app_url": "https://github.com/owner/repo/issues/123"
 }
 ```
 
-### 2. Features Array
+### 2. Features Array (31 features)
 
-Features to include in the comparison (currently only first 10 rows are implemented):
+Each feature defines a row in the comparison table:
 
 ```json
 {
   "name": "Feature Name",
-  "link": "features.md#feature-anchor"
+  "link": "features.md#feature-anchor",
+  "processor": "generate_default_row",
+  "description": "Feature description"
 }
 ```
 
-## Current Implementation
+**Processor Types**:
+- `generate_logo_row`: Special processor for logo display
+- `generate_badge_row`: GitHub badge generation (requires badge_template, use_lowercase, use_branch)
+- `generate_license_row`: License badge handling
+- `generate_default_row` (or null): Score-based row with emoji conversion
 
-The script currently generates the following rows (lines 18-50 of the original table):
+### Score Value Conversion
 
-1. **Logo** - Project logos as images
-2. **Github Stars** - Star count badges
-3. **Contributors** - Contributor count badges
-4. **Last Commit** - Last commit date badges
-5. **Source Language** - Primary programming language
-6. **License** - License type badges
-7. **Demo** - Demo links with ratings
-8. **Freeness** - (Not yet implemented in generator)
-9. **Automatic Mobile Upload** - (Not yet implemented in generator)
-10. **Web App** - (Not yet implemented in generator)
+The system automatically converts score values to emoji representations:
+- `"x"` → ❌ (not available)
+- `"0"-"9"` → ✅0️⃣-✅9️⃣ (available with rating)
+- `"10"` → ✅🔟 (perfect score)
+- `"wip-N"` → 🚧N️⃣ (work in progress with rating)
 
-## Adding More Features
+### Data Validation
 
-To add support for additional feature rows:
+The `validate_projects_json()` function ensures data integrity:
 
-1. Add feature data to each project in `projects.json`
-2. Create a new function in `generate_table.py`:
+✅ **Required Fields Check**: Validates all projects have name, repo, logo_url, logo_alt  
+✅ **Unmapped Keys Detection**: Identifies project keys not mapped to any feature  
+✅ **Error Aggregation**: Collects all errors before reporting  
+✅ **Detailed Error Messages**: Shows which projects have which unmapped keys
+
+Example validation output:
+```
+projects.json validation FAILED:
+Project 'App1' is missing fields: {'repo'}
+Found 2 project key(s) not mapped to any feature:
+  • 'invalid_key_1' in: App1, App3
+  • 'another_bad_key' in: App3
+```
+
+## Adding New Features
+
+To add a new feature to the comparison table:
+
+1. **Add feature definition to `projects.json`**:
+```json
+{
+  "features": [
+    {
+      "name": "New Feature",
+      "link": "features.md#new-feature",
+      "description": "Description of the feature"
+    }
+  ]
+}
+```
+
+2. **Add feature values to projects**:
+```json
+{
+  "projects": [
+    {
+      "name": "ProjectName",
+      "new_feature": "8",
+      "new_feature_url": "https://example.com/feature"
+    }
+  ]
+}
+```
+
+3. **Regenerate README**:
+```bash
+python3 generate_table.py
+```
+
+The system automatically converts feature names (e.g., "New Feature" → "new_feature") and handles score-to-emoji conversion.
+
+### Custom Processors
+
+For specialized row formatting, implement a custom processor in `generate_table.py`:
 
 ```python
-def generate_feature_row(projects):
-    """Generate your feature row."""
+def generate_custom_row(projects):
+    """Generate a custom-formatted row."""
     row = "| [Feature Name](features.md#anchor) "
     
     for project in projects:
-        # Get data from project dict
         value = project.get('feature_key', '❌')
+        # Custom formatting logic here
         row += f"| {value} "
     
     row += "|\n"
     return row
 ```
 
-3. Add the function call to `generate_comparison_table()`:
-
-```python
-table += generate_feature_row(projects)
+Then reference it in the feature definition:
+```json
+{
+  "name": "Custom Feature",
+  "processor": "generate_custom_row"
+}
 ```
+
+## CI/CD Integration
+
+The project includes GitHub Actions workflow (`.github/workflows/mega-linter.yml`) that:
+- Runs MegaLinter for code quality
+- Validates projects.json structure
+- Runs all tests to ensure consistency
+- Verifies readme.md matches generated output
 
 ## Template Customization
 

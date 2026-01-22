@@ -747,7 +747,7 @@ class TestValidateProjectsJson(unittest.TestCase):
             self.fail("validate_projects_json raised ValueError for standard keys")
 
     def test_feature_variants_recognized(self):
-        """Test that _url and _title variants of features are recognized."""
+        """Test that _url variant of features is recognized."""
         data = {
             "projects": [
                 {
@@ -757,7 +757,6 @@ class TestValidateProjectsJson(unittest.TestCase):
                     "logo_alt": "App1 Logo",
                     "web_app": "8",
                     "web_app_url": "https://example.com",
-                    "web_app_title": "Web Version",
                 }
             ],
             "features": [{"name": "Web App", "description": "test"}],

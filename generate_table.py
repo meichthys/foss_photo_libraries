@@ -262,9 +262,8 @@ def validate_projects_json(data):
     for feature in features:
         feature_name = feature["name"].lower().replace(" ", "_").replace("/", "_")
         feature_keys.add(feature_name)
-        # Also add _url and _title variants
+        # Also add _url variant
         feature_keys.add(f"{feature_name}_url")
-        feature_keys.add(f"{feature_name}_title")
 
     # Track which projects have which keys
     all_keys = set()
