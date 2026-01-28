@@ -1,28 +1,37 @@
-# Table Generation System
+# Contribution Guidelines
 
-This system allows you to regenerate the README.md comparison table from structured JSON data with automatic validation and comprehensive test coverage.
+To contribute a project or feature, you should only need to make changes to `projects.json`.
+
+
+## Steps
+
+1. Make changes to `projects.json` (take note of the [project structure](##Project-Data-Structure))
+
+2. Re-generate the README.md file:
+
+  ```bash
+  python3 generate_table.py
+  ```
+
+3. Run the test suite:
+
+  ```bash
+  python3 -m pytest test_generate_table.py -v
+  ```
+
+4. Submit your pull request
+
 
 ## Files
 
-- **`projects.json`**: Contains all project data (16 projects) and feature definitions (31 features)
+For more involved contributions a description of the main project files are:
+
+- **`projects.json`**: Contains all projects and their features
 - **`readme.tpl`**: Template file for the README (contains static content and `{{COMPARISON_TABLE}}` placeholder)
-- **`generate_table.py`**: Python script that generates the table from JSON and validates data integrity
+- **`generate_table.py`**: Python script that generates the table from JSON and validates its integrity
 - **`readme.md`**: Generated output file (the main README)
 - **`test_generate_table.py`**: Comprehensive test suite covering all functions and validation
 
-## Usage
-
-To regenerate the README.md file:
-
-```bash
-python3 generate_table.py
-```
-
-To run the test suite:
-
-```bash
-python3 -m pytest test_generate_table.py -v
-```
 
 ## Project Data Structure
 
@@ -41,8 +50,8 @@ Each project requires these **mandatory fields**:
 - `license_custom`: Custom license text (overrides GitHub badge)
 
 **Feature fields**: Any feature defined in the features array can be added as:
-- `feature_key`: Value (e.g., "8", "x", "wip-3")
-- `feature_key_url`: Optional URL to link the value
+- `feature_name`: Value indicating the quality of the feature on a scale of 1-10 ("x" means the feature doesn't exist, and prepending 'wip-' means feature is a work in process)
+- `feature_name_url`: Optional URL to link to the project's documentation of the feature
 
 Example:
 ```json
@@ -57,10 +66,11 @@ Example:
   "web_app_url": "https://demo.example.com",
   "ios_app": "x",
   "ios_app_url": "https://github.com/owner/repo/issues/123"
+  ...
 }
 ```
 
-### 2. Features Array (31 features)
+### 2. Features Array
 
 Each feature defines a row in the comparison table:
 
@@ -81,19 +91,19 @@ Each feature defines a row in the comparison table:
 
 ### Score Value Conversion
 
-The system automatically converts score values to emoji representations:
+The system automatically converts score values to an emoji representation:
 - `"x"` → ❌ (not available)
 - `"0"-"9"` → ✅0️⃣-✅9️⃣ (available with rating)
-- `"10"` → ✅🔟 (perfect score)
-- `"wip-N"` → 🚧N️⃣ (work in progress with rating)
+- `"10"` → ✅🔟 (perfect score - used sparingly)
+- `"wip-1"` → 🚧1️⃣ (work in progress with rating of 1)
 
 ### Data Validation
 
 The `validate_projects_json()` function ensures data integrity:
 
-✅ **Required Fields Check**: Validates all projects have name, repo, logo_url, logo_alt  
-✅ **Unmapped Keys Detection**: Identifies project keys not mapped to any feature  
-✅ **Error Aggregation**: Collects all errors before reporting  
+✅ **Required Fields Check**: Validates all projects have name, repo, logo_url, logo_alt
+✅ **Unmapped Keys Detection**: Identifies project keys not mapped to any feature
+✅ **Error Aggregation**: Collects all errors before reporting
 ✅ **Detailed Error Messages**: Shows which projects have which unmapped keys
 
 Example validation output:
@@ -150,12 +160,12 @@ For specialized row formatting, implement a custom processor in `generate_table.
 def generate_custom_row(projects):
     """Generate a custom-formatted row."""
     row = "| [Feature Name](features.md#anchor) "
-    
+
     for project in projects:
         value = project.get('feature_key', '❌')
         # Custom formatting logic here
         row += f"| {value} "
-    
+
     row += "|\n"
     return row
 ```

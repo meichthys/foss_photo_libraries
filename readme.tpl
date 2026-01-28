@@ -35,9 +35,7 @@ Check out my other feature comparisons:
 ## 🤝 Contributing
 
 Please contribute additions and corrections!
-When contributing, please add links to the source of the information.
-(i.e. link to an issue that indicates that a feature does not exist)
-Tip: Using a [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) helps with formatting.
+Please refer to [CONTRIBUTE.md](CONTRIBUTE.md) for details.
 
 ## 🆘 Support
 
