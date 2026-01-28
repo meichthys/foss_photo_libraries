@@ -21,6 +21,7 @@
       "discovery": "2",
       "existing_folders": "x",
       "albums": "8",
+      "nested_albums": "8",
       "slideshow": "x",
       "timeline": "3",
       "sharing": "7",
@@ -235,6 +236,8 @@
       "existing_folders": "x",
       "existing_folders_url": "https://github.com/LycheeOrg/Lychee/issues/1096",
       "albums": "8",
+      "nested_albums": "9",
+      "nested_albums_url": "https://github.com/LycheeOrg/Lychee/blob/master/docs/specs/4-architecture/album-tree-structure.md",
       "slideshow": "4",
       "slideshow_url": "https://github.com/LycheeOrg/Lychee/pull/1819",
       "timeline": "4",
@@ -428,6 +431,7 @@
       "discovery": "x",
       "existing_folders": "5",
       "albums": "6",
+      "nested_albums": "6",
       "slideshow": "7",
       "timeline": "5",
       "sharing": "7",
@@ -545,6 +549,7 @@
       "existing_folders": "7",
       "existing_folders_url": "https://github.com/Piwigo/Piwigo/issues/960",
       "albums": "8",
+      "nested_albums": "8",
       "slideshow": "5",
       "timeline": "3",
       "sharing": "5",
@@ -685,6 +690,10 @@
     {
       "name": "Albums",
       "link": "features.md#albums"
+    },
+    {
+      "name": "Nested Albums",
+      "link": "features.md#nested-albums"
     },
     {
       "name": "Slideshow",

@@ -74,6 +74,10 @@ Are existing photo directory structures preserved and browsable?
 
 Can albums be created and organized?
 
+## Nested Albums
+
+Can albums be nested within other albums for better organization?
+
 ## Slideshow
 
 Is it possible to view photos in an automated slideshow?
