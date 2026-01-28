@@ -80,3 +80,27 @@ jobs:
         with:
           branch: ${{ github.event.pull_request.head.ref || github.head_ref || github.ref }}
           commit_message: "[MegaLinter] Apply linters fixes"
+  
+  # We want that the only edit points are: readme.tpl and projects.json
+  # If someone edits readme.md directly the job fails
+  validate:
+    name: Validate readme.md
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      
+      - name: Run consistency tests
+        run: python3 test_generate_table.py TestReadmeConsistency -v
+      
+      - name: Run all tests
+        run: python3 test_generate_table.py -v
+
