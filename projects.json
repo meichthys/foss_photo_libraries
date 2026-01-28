@@ -106,7 +106,7 @@
       "name": "HomeGallery",
       "repo": "xemle/home-gallery",
       "branch": "master",
-      "logo_url": "https://raw.githubusercontent.com/xemle/home-gallery-doc/refs/heads/master/source/favicon.ico",
+      "logo_url": "https://github.com/xemle/home-gallery/blob/master/packages/webapp/public/logo.svg",
       "logo_alt": "HomeGallery Logo",
       "demo_url": "https://demo.home-gallery.org/https://demo.photoprism.app/library/brow",
       "demo": "6",
@@ -479,7 +479,7 @@
       "exif_data": "9",
       "multiple_user_support": "x",
       "multiple_user_support_url": "https://github.com/photoprism/photoprism/issues/98",
-      "authentication_providers": "wip",
+      "authentication_providers": "5",
       "authentication_providers_url": "https://github.com/photoprism/photoprism/issues/782"
     },
     {
