@@ -31,6 +31,7 @@ An HTML version of this comparison table is here: https://meichthys.github.io/fo
 Check out my other feature comparisons:
 
 📝 [foss_note_apps](https://github.com/meichthys/foss_note_apps)
+📖 [foss_book_libraries](https://github.com/webysther/foss_book_libraries)
 
 ## 🤝 Contributing
 
