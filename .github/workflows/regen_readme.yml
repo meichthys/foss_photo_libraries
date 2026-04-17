@@ -1,0 +1,12 @@
+name: Regenerate Readme
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python generate_table.py
