@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tests for generate_table.py
+Tests for generate_readme.py
 """
 
 import unittest
@@ -9,7 +9,7 @@ import tempfile
 import os
 import sys
 from io import StringIO
-from generate_table import (
+from generate_readme import (
     score_to_emoji,
     load_json,
     generate_table_header,
@@ -498,7 +498,7 @@ class TestReadmeConsistency(unittest.TestCase):
                 current_readme,
                 generated_readme,
                 "readme.md does not match generated output! "
-                "Run 'python3 generate_table.py' to regenerate it.",
+                "Run 'python3 generate_readme.py' to regenerate it.",
             )
         finally:
             if os.path.exists(temp_output):

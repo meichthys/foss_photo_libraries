@@ -5,21 +5,15 @@ To contribute a project or feature, you should only need to make changes to `pro
 
 ## Steps
 
-1. Make changes to `projects.json` (take note of the [project structure](##Project-Data-Structure))
+1. Make changes to `projects.json` (take note of the [project structure](#project-data-structure))
 
-2. Re-generate the README.md file:
-
-  ```bash
-  python3 generate_table.py
-  ```
-
-3. Run the test suite:
+2. Re-generate the README.md file to review changes (This will also happen automatically when you push):
 
   ```bash
-  python3 -m pytest test_generate_table.py -v
+  python3 generate_readme.py
   ```
 
-4. Submit your pull request
+3. Submit your pull request
 
 
 ## Files
@@ -28,9 +22,9 @@ For more involved contributions a description of the main project files are:
 
 - **`projects.json`**: Contains all projects and their features
 - **`readme.tpl`**: Template file for the README (contains static content and `{{COMPARISON_TABLE}}` placeholder)
-- **`generate_table.py`**: Python script that generates the table from JSON and validates its integrity
+- **`generate_readme.py`**: Python script that generates the table from JSON and validates its integrity
 - **`readme.md`**: Generated output file (the main README)
-- **`test_generate_table.py`**: Comprehensive test suite covering all functions and validation
+- **`test_generate_readme.py`**: Comprehensive test suite covering all functions and validation
 
 
 ## Project Data Structure
@@ -147,14 +141,14 @@ To add a new feature to the comparison table:
 
 3. **Regenerate README**:
 ```bash
-python3 generate_table.py
+python3 generate_readme.py
 ```
 
 The system automatically converts feature names (e.g., "New Feature" → "new_feature") and handles score-to-emoji conversion.
 
 ### Custom Processors
 
-For specialized row formatting, implement a custom processor in `generate_table.py`:
+For specialized row formatting, implement a custom processor in `generate_readme.py`:
 
 ```python
 def generate_custom_row(projects):
