@@ -5,7 +5,7 @@ To contribute a project or feature, you should only need to make changes to `pro
 
 ## Steps
 
-1. Make changes to `projects.json` (take note of the [project structure](##Project-Data-Structure))
+1. Make changes to `projects.json` (take note of the [project structure](#project-data-structure))
 
 2. Re-generate the README.md file:
 
