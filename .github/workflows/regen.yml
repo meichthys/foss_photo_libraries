@@ -26,7 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
       - run: python generate_readme.py
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+        with:
+          commit_message: "[skip ci] Regenerate readme"
+          file_pattern: readme.md
 
   build:
     name: MegaLinter
@@ -39,6 +46,7 @@ jobs:
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: ${{ github.ref }}
 
       # MegaLinter
       - name: MegaLinter
@@ -113,6 +121,7 @@ jobs:
   # If someone edits readme.md directly the job fails
   validate:
     name: Validate readme.md
+    needs: regenerate_readme
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -120,6 +129,7 @@ jobs:
         with:
           token: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: ${{ github.ref }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
