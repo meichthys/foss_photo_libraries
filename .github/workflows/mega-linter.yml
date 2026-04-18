@@ -23,6 +23,7 @@ concurrency:
 jobs:
   build:
     name: MegaLinter
+    needs: regenerate_readme
     runs-on: ubuntu-latest
     steps:
       # Git Checkout
