@@ -197,7 +197,8 @@ def generate_comparison_table(data):
     features = data.get("features", [])
 
     # Generate header
-    table = generate_table_header(projects)
+    table = generate_project_selector(data)
+    table += generate_table_header(projects)
 
     # Loop over features and generate each row
     for feature in features:
@@ -295,6 +296,15 @@ def validate_projects_json(data):
         raise ValueError(f"projects.json validation failed with {len(errors)} error(s)")
 
 
+def generate_project_selector(data):
+    projects_checkboxes = "(Toggle visibility of specific project in the table)\n\n- [x]{: #allCheckbox} All\n"
+    for project in data["projects"]:
+        projects_checkboxes += f"- [ ] {project["name"]}\n"
+
+    projects_checkboxes += "\n\n"
+    return projects_checkboxes
+    
+
 def generate_readme(
     template_file="readme.tpl", output_file="readme.md", json_file="projects.json"
 ):
@@ -311,6 +321,7 @@ def generate_readme(
 
     # Generate table
     table = generate_comparison_table(data)
+    print(table)
 
     # Replace placeholder in template
     output = template.replace("{{COMPARISON_TABLE}}", table)

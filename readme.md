@@ -15,6 +15,28 @@ Tip: Hover over emoji for additional information (ðŸ”— link to related issue, ðŸ
 ```
 
 
+(Toggle visibility of specific project in the table)
+
+- [x]{: #allCheckbox} All
+- [ ] Chevereto
+- [ ] Damselfly
+- [ ] Ente
+- [ ] Foldergram
+- [ ] HomeGallery
+- [ ] Immich
+- [ ] Librephotos
+- [ ] Lychee
+- [ ] Nextcloud Photos
+- [ ] Nextcloud Memories
+- [ ] Photonix
+- [ ] Photofield
+- [ ] PiGallery2
+- [ ] Photoprism
+- [ ] Photoview
+- [ ] Piwigo
+- [ ] Snapcrescent
+
+
 | Feature | [Chevereto](https://github.com/chevereto/chevereto) | [Damselfly](https://github.com/Webreaper/Damselfly) | [Ente](https://github.com/ente-io/ente) | [Foldergram](https://github.com/foldergram/foldergram) | [HomeGallery](https://github.com/xemle/home-gallery) | [Immich](https://github.com/immich-app/immich) | [Librephotos](https://github.com/LibrePhotos/librephotos) | [Lychee](https://github.com/LycheeOrg/Lychee) | [Nextcloud Photos](https://github.com/nextcloud/photos) | [Nextcloud Memories](https://github.com/pulsejet/memories) | [Photonix](https://github.com/photonixapp/photonix) | [Photofield](https://github.com/SmilyOrg/photofield) | [PiGallery2](https://github.com/bpatrik/pigallery2) | [Photoprism](https://github.com/photoprism/photoprism) | [Photoview](https://github.com/photoview/photoview) | [Piwigo](https://github.com/Piwigo/Piwigo) | [Snapcrescent](https://github.com/snapcrescent/snapcrescent) |
 | :------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------- | ------------------------------------------------------ | ---------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------- | --------------------------------------------- | ------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------ |
 | Logo | <img src="https://raw.githubusercontent.com/chevereto/chevereto/4.2/content/images/system/default/favicon.png" style="width: 50px"  alt="Chevreto Logo"/> | <img src="https://raw.githubusercontent.com/Webreaper/Damselfly/master/docs/cropped-Damselfly-Logo.webp" style="width: 50px"  alt="Dameslfly Logo"/> | <img src="https://raw.githubusercontent.com/ente-io/ente/main/docs/docs/public/logo.png" style="width: 50px"  alt="Ente Logo"/> | <img src="https://raw.githubusercontent.com/foldergram/foldergram/main/client/public/favicon.svg" style="width: 50px"  alt="Foldergram Logo"/> | <img src="https://github.com/xemle/home-gallery/blob/master/packages/webapp/public/logo.svg" style="width: 50px"  alt="HomeGallery Logo"/> | <img src="https://raw.githubusercontent.com/immich-app/immich/main/mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" style="width: 50px"  alt="Immich Logo"/> | <img src="https://raw.githubusercontent.com/LibrePhotos/librephotos/dev/screenshots/lp-white.png" style="width: 50px"  alt="Librephotos Logo"/> | <img src="https://avatars.githubusercontent.com/u/37916028" style="width: 50px"  alt="Lychee Logo"/> | <img src="https://raw.githubusercontent.com/nextcloud/android/master/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" style="width: 50px"  alt="NextcloudPhotos Logo"/> | <img src="https://raw.githubusercontent.com/pulsejet/memories/master/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" style="width: 50px"  alt="Memories Logo"/> | <img src="https://raw.githubusercontent.com/photonixapp/photonix/master/ui/public/favicon.png" style="width: 50px"  alt="Photonix Logo"/> | <img src="https://raw.githubusercontent.com/SmilyOrg/photofield/main/ui/public/android-chrome-512x512.png" style="width: 50px"  alt="Photofield Logo"/> | <img src="https://raw.githubusercontent.com/bpatrik/pigallery2/master/docs/assets/icon.png" style="width: 50px"  alt="PiGallery2 Logo"/> | <img src="https://raw.githubusercontent.com/photoprism/photoprism/develop/assets/static/icons/app/512.png" style="width: 50px"  alt="Photoprism Logo"/> | <img src="https://raw.githubusercontent.com/photoview/photoview/master/ui/public/logo512.png" style="width: 50px"  alt="Photoview Logo"/> | <img src="https://raw.githubusercontent.com/Piwigo/Piwigo/d69bc8b88434cf065b63bac87a4adcc8143ddb21/themes/default/icon/piwigo.org-icon%201.svg" style="width: 50px"  alt="Piwigo Logo"/> | <img src="https://raw.githubusercontent.com/snapcrescent/snapcrescent/main/snapcrescent_mobile/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" style="width: 50px"  alt="Snapcrescent Logo"/> |
