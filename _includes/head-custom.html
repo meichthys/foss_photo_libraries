@@ -15,6 +15,37 @@
       document.querySelector("button[name='toggle-table-width']").textContent = "Collapse table";
     }
   }
+  // Show only the checked project columns, or every column when none is checked.
+  function updateProjectColumns() {
+    var boxes = Array.from(document.querySelectorAll(".project-picker input"));
+    var anyChecked = boxes.some(function(box) { return box.checked; });
+    document.getElementById("project-columns").textContent = boxes
+      .filter(function(box) { return anyChecked && !box.checked; })
+      .map(function(box) { return "table tr > :nth-child(" + box.value + ") { display: none; }"; })
+      .join("\n");
+  }
+
+  function createProjectPicker(table) {
+    var picker = document.createElement("div");
+    picker.className = "project-picker";
+    picker.textContent = "Compare: ";
+    table.querySelectorAll("thead th").forEach(function(header, index) {
+      if (index === 0) return;
+      var box = document.createElement("input");
+      box.type = "checkbox";
+      box.value = index + 1;
+      box.addEventListener("change", updateProjectColumns);
+      var label = document.createElement("label");
+      label.append(box, " " + header.textContent.trim());
+      picker.appendChild(label);
+    });
+
+    var style = document.createElement("style");
+    style.id = "project-columns";
+    document.head.appendChild(style);
+    return picker;
+  }
+
   document.addEventListener("DOMContentLoaded", function(event) {
     var el = document.querySelector('table');
     var wrapper = document.createElement('div');
@@ -22,6 +53,7 @@
     el.parentNode.insertBefore(wrapper, el);
     wrapper.appendChild(el);
     wrapper.insertAdjacentHTML( 'beforebegin', '<button name="toggle-table-width" onclick="toggleWidth()">Expand table</button>' );
+    wrapper.parentNode.insertBefore(createProjectPicker(el), wrapper);
   });
 </script>
 <!-- end custom head snippets -->

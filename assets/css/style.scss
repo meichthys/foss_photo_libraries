@@ -16,6 +16,16 @@ $background-color: #fff;
   }
 }
 
+.project-picker {
+  margin: .5rem 0;
+
+  label {
+    display: inline-block;
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+}
+
 th {
   background: $background-color;
   position: sticky;
