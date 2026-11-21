@@ -11,6 +11,12 @@
     },
     {
       "pattern": "https://demo.snapcrescent.app"
+    },
+    {
+      "pattern": "https://demo.chevereto.com/"
+    },
+    {
+      "pattern": "https://demo2.librephotos.com/"
     }
   ]
 }
