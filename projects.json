@@ -609,7 +609,7 @@
       "name": "Simple Photos",
       "repo": "Wulfic/simple-photos",
       "branch": "main",
-      "logo_url": "https://raw.githubusercontent.com/Wulfic/simple-photos/main/simplephotos.png",
+      "logo_url": "https://raw.githubusercontent.com/Wulfic/simple-photos/refs/heads/main/Icons/simplephotos.png",
       "logo_alt": "Simple Photos Logo",
       "freeness": "10",
       "automatic_mobile_upload": "8",
