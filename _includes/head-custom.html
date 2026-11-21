@@ -28,7 +28,7 @@
   function createProjectPicker(table) {
     var picker = document.createElement("div");
     picker.className = "project-picker";
-    picker.textContent = "Compare:";
+    picker.textContent = "Compare: ";
     table.querySelectorAll("thead th").forEach(function(header, index) {
       if (index === 0) return;
       var box = document.createElement("input");

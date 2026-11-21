@@ -17,12 +17,11 @@ $background-color: #fff;
 }
 
 .project-picker {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1rem;
-  margin: 0.5rem 0;
+  margin: .5rem 0;
 
   label {
+    display: inline-block;
+    margin-right: 1rem;
     white-space: nowrap;
   }
 }
