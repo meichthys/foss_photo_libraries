@@ -15,62 +15,35 @@
       document.querySelector("button[name='toggle-table-width']").textContent = "Collapse table";
     }
   }
-
-  function updateVisibility() {
-    const all = document.querySelector('#allCheckbox');
-    const showAll = all && all.checked;
-    const table = document.querySelector('table');
-    if (!table) return;
-
-    const hiddenColumns = [];
-
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-      if (checkbox === all || !checkbox.id) return;
-
-      // The header link has the class matching the checkbox id
-      const header = table.querySelector(`thead .${CSS.escape(checkbox.id)}`)?.closest('th');
-      if (!header) {
-        console.warn('No header found for', checkbox.id);
-        return;
-      }
-
-      if (!(showAll || checkbox.checked)) {
-        hiddenColumns.push(header.cellIndex + 1);   // nth-child is 1-based
-      }
-    });
-
-    let style = document.getElementById('column-visibility');
-    if (!style) {
-      style = document.createElement('style');
-      style.id = 'column-visibility';
-      document.head.appendChild(style);
-    }
-    style.textContent = hiddenColumns
-      .map(i => `table tr > :nth-child(${i}) { display: none !important; }`)
-      .join('\n');
+  // Show only the checked project columns, or every column when none is checked.
+  function updateProjectColumns() {
+    var boxes = Array.from(document.querySelectorAll(".project-picker input"));
+    var anyChecked = boxes.some(function(box) { return box.checked; });
+    document.getElementById("project-columns").textContent = boxes
+      .filter(function(box) { return anyChecked && !box.checked; })
+      .map(function(box) { return "table tr > :nth-child(" + box.value + ") { display: none; }"; })
+      .join("\n");
   }
 
-  function onCheckboxChange(event) {
-    const all = document.querySelector('#allCheckbox');
-    const changed = event.target;
-    const projects = [...document.querySelectorAll('input[type="checkbox"]')]
-      .filter(cb => cb !== all);
+  function createProjectPicker(table) {
+    var picker = document.createElement("div");
+    picker.className = "project-picker";
+    picker.textContent = "Compare:";
+    table.querySelectorAll("thead th").forEach(function(header, index) {
+      if (index === 0) return;
+      var box = document.createElement("input");
+      box.type = "checkbox";
+      box.value = index + 1;
+      box.addEventListener("change", updateProjectColumns);
+      var label = document.createElement("label");
+      label.append(box, " " + header.textContent.trim());
+      picker.appendChild(label);
+    });
 
-    if (changed === all) {
-      if (all.checked) {
-        projects.forEach(cb => cb.checked = false);   // All overrides the rest
-      } else if (!projects.some(cb => cb.checked)) {
-        all.checked = true;                           // never leave an empty table
-      }
-    } else {
-      if (changed.checked) {
-        all.checked = false;                          // picking a project leaves "All" mode
-      } else if (!projects.some(cb => cb.checked)) {
-        all.checked = true;                           // last project unchecked -> back to All
-      }
-    }
-
-    updateVisibility();
+    var style = document.createElement("style");
+    style.id = "project-columns";
+    document.head.appendChild(style);
+    return picker;
   }
 
   document.addEventListener("DOMContentLoaded", function(event) {
@@ -80,27 +53,7 @@
     el.parentNode.insertBefore(wrapper, el);
     wrapper.appendChild(el);
     wrapper.insertAdjacentHTML( 'beforebegin', '<button name="toggle-table-width" onclick="toggleWidth()">Expand table</button>' );
-
-    // Clickable checkboxes
-    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-      checkbox.removeAttribute('disabled');   // kramdown adds this
-      checkbox.addEventListener('change', onCheckboxChange);
-    });
-
-    // Adds IDs to cells for visibility toggling
-    document.querySelectorAll('td [id], th [id]').forEach(el => {
-      const cell = el.closest('td, th');
-      if (!cell || cell.id) return;
-      cell.id = el.id;
-
-      if (el.tagName === 'SPAN') {
-        el.replaceWith(...el.childNodes);
-      } else {
-        el.removeAttribute('id');
-      }
-    });
-
-    updateVisibility();
+    wrapper.parentNode.insertBefore(createProjectPicker(el), wrapper);
   });
 </script>
 <!-- end custom head snippets -->

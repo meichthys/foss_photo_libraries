@@ -75,7 +75,7 @@ def generate_table_header(projects):
         name = project["name"]
         repo = project["repo"]
         url = f"https://github.com/{repo}"
-        header += '| <a class="%s" href="{%s}">%s</a> ' % (project["name"].lower().replace(" ",""), url, name)
+        header += f"| [{name}]({url}) "
         separator += "| " + "-" * (len(url) + len(name) + 4) + " "
 
     header += "|\n"
@@ -91,7 +91,7 @@ def generate_logo_row(projects):
     for project in projects:
         logo_url = project["logo_url"]
         logo_alt = project["logo_alt"]
-        cell = f'<img src="{logo_url}" style="width: 50px"  alt="{logo_alt}" class="{project["name"]}">'
+        cell = f'<img src="{logo_url}" style="width: 50px"  alt="{logo_alt}"/>'
         row += f"| {cell} "
 
     row += "|\n"
@@ -128,8 +128,7 @@ def generate_badge_row(
         else:
             badge = badge_template.format(repo=repo)
 
-        row += '| <span class="%s">%s</span> ' % (project["name"].lower().replace(" ",""), badge)
-
+        row += f"| {badge} "
 
     row += "|\n"
     return row
@@ -147,8 +146,7 @@ def generate_license_row(projects):
         else:
             repo = project["repo"]
             badge = f"![?](https://img.shields.io/github/license/{repo}?label=%20)"
-        row += '| <span class="%s">%s</span> ' % (project["name"].lower().replace(" ",""), badge)
-
+        row += f"| {badge} "
 
     row += "|\n"
     return row
@@ -187,7 +185,7 @@ def generate_default_row(feature, projects):
             url = project[feature_url_key]
             cell = f"[{cell}]({url})"
 
-        row += '| <span class="%s">%s</span> ' % (project["name"].lower().replace(" ",""), cell)
+        row += f"| {cell} "
 
     row += "|\n"
     return row
@@ -199,8 +197,7 @@ def generate_comparison_table(data):
     features = data.get("features", [])
 
     # Generate header
-    table = generate_project_selector(data)
-    table += generate_table_header(projects)
+    table = generate_table_header(projects)
 
     # Loop over features and generate each row
     for feature in features:
@@ -298,16 +295,6 @@ def validate_projects_json(data):
         raise ValueError(f"projects.json validation failed with {len(errors)} error(s)")
 
 
-def generate_project_selector(data):
-    projects_checkboxes = "(Toggle visibility of specific project in the table)\n\n- [x] {:#allCheckbox} All\n"
-    for project in data["projects"]:
-        project_name = project["name"]
-        projects_checkboxes += "- [ ] {:#%s} %s\n" % (project_name.lower().replace(" ",""), project_name)
-
-    projects_checkboxes += "\n\n"
-    return projects_checkboxes
-    
-
 def generate_readme(
     template_file="readme.tpl", output_file="readme.md", json_file="projects.json"
 ):
@@ -324,7 +311,6 @@ def generate_readme(
 
     # Generate table
     table = generate_comparison_table(data)
-    print(table)
 
     # Replace placeholder in template
     output = template.replace("{{COMPARISON_TABLE}}", table)
