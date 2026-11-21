@@ -122,7 +122,7 @@
       "videos": "8",
       "geolocation_map": "x",
       "discovery": "7",
-      "existing_folders": "7",
+      "existing_folders": "8",
       "existing_folders_url": "https://github.com/foldergram/foldergram#how-it-works",
       "albums": "x",
       "slideshow": "x",
@@ -292,8 +292,7 @@
       "exif_data_url": "https://github.com/LycheeOrg/php-exif",
       "multiple_user_support": "9",
       "multiple_user_support_url": "https://github.com/LycheeOrg/Lychee/pull/3425",
-      "authentication_providers": "9",
-      "authentication_providers_url": ""
+      "authentication_providers": "9"
     },
     {
       "name": "Nextcloud Photos",

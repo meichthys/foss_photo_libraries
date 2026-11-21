@@ -7,7 +7,7 @@ To contribute a project or feature, you should only need to make changes to `pro
 
 1. Make changes to `projects.json` (take note of the [project structure](#project-data-structure))
 
-2. Re-generate the README.md file to review changes (This will also happen automatically when you push):
+2. Re-generate the README.md file to review changes:
 
   ```bash
   python3 generate_readme.py
@@ -101,7 +101,7 @@ The `validate_projects_json()` function ensures data integrity:
 ✅ **Detailed Error Messages**: Shows which projects have which unmapped keys
 
 Example validation output:
-```
+```bash
 projects.json validation FAILED:
 Project 'App1' is missing fields: {'repo'}
 Found 2 project key(s) not mapped to any feature:
